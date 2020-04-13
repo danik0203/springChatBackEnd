@@ -18,6 +18,6 @@ public class WebSocketControl {
 
     @MessageMapping("/send/message")
     public void onReceivedMessage(String massage) throws Exception {
-        this.template.convertAndSend("/chat", "-"+massage+"-");
+        this.template.convertAndSend("/chat", massage);
     }
 }
